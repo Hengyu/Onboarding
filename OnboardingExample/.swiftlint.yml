@@ -1,0 +1,9 @@
+disabled_rules:
+  - line_length
+  - force_cast
+  - identifier_name
+  - unused_setter_value
+  - force_try
+  - type_name
+  - todo
+  - cyclomatic_complexity
