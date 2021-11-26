@@ -91,7 +91,7 @@ public final class TipsViewController<T: TipsItemType>: UIViewController {
     }
 
     private func configureLayout(_ previousTraitCollection: UITraitCollection?) {
-        //Because iPad will not receive 'traitCollectionDidChange:' when orientation changes.
+        //  iPad will not receive 'traitCollectionDidChange:' when orientation changes
         if traitCollection.userInterfaceIdiom == .pad {
             tipsView.traitCollectionDidChange(previousTraitCollection)
         }
