@@ -132,19 +132,11 @@ public final class HelpPageViewController: UIPageViewController {
     }
 
     private func updateConditionalLayout(using traitCollection: UITraitCollection) {
-        var lagoutMarginsBlock = {
-            self.view.layoutMargins = traitCollection.needsLargeDisplay
+        switch traitCollection.userInterfaceIdiom {
+        case .mac, .pad, .phone:
+            view.layoutMargins = traitCollection.needsLargeDisplay
                 ? Constants.Dimension.regularEdgeInsets
                 : Constants.Dimension.compactEdgeInsets
-        }
-        switch traitCollection.userInterfaceIdiom {
-        #if targetEnvironment(macCatalyst)
-        case .pad, .phone:
-            lagoutMarginsBlock()
-        #else
-        case .mac, .pad, .phone:
-            lagoutMarginsBlock()
-        #endif
         case .carPlay, .tv, .unspecified:
             fallthrough
         @unknown default:
