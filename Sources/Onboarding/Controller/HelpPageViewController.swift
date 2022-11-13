@@ -14,7 +14,7 @@ public final class HelpPageViewController: UIPageViewController {
     private var currentPage: Int = 0
     private var tipsViewControllers: [TipsViewController<TipsItem>] = []
 
-    private let cancelBtn: UIButton = .makeClose()
+    private let cancelButton: UIButton = .makeClose()
     private let pageContentView: UIVisualEffectView = .init(effect: UIBlurEffect(style: .light))
     private let pageControl: UIPageControl = .init(frame: .zero)
 
@@ -46,6 +46,14 @@ public final class HelpPageViewController: UIPageViewController {
         setupGesture()
     }
 
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // reset the cancel button's visibility due to
+        // the view controller could be reused in elsewhere
+        cancelButton.isHidden = navigationController != nil
+    }
+
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         updateConditionalLayout(using: traitCollection)
@@ -54,9 +62,8 @@ public final class HelpPageViewController: UIPageViewController {
     private func setupComponents() {
         view.backgroundColor = .defaultBackground
 
-        cancelBtn.addTarget(self, action: #selector(cancelBtnClicked(_:)), for: .primaryActionTriggered)
-        cancelBtn.isHidden = navigationController != nil
-        view.addSubview(cancelBtn)
+        cancelButton.addTarget(self, action: #selector(cancelBtnClicked(_:)), for: .primaryActionTriggered)
+        view.addSubview(cancelButton)
 
         pageControl.numberOfPages = items.count
         pageControl.currentPageIndicatorTintColor = .currentPageIndicator
@@ -74,19 +81,19 @@ public final class HelpPageViewController: UIPageViewController {
     }
 
     private func setupConstraints() {
-        cancelBtn.translatesAutoresizingMaskIntoConstraints = false
-        cancelBtn.trailingAnchor.constraint(
+        cancelButton.translatesAutoresizingMaskIntoConstraints = false
+        cancelButton.trailingAnchor.constraint(
             equalTo: view.safeAreaLayoutGuide.trailingAnchor,
             constant: -Constants.Dimension.verticalSmall
         ).isActive = true
-        cancelBtn.topAnchor.constraint(
+        cancelButton.topAnchor.constraint(
             equalTo: view.safeAreaLayoutGuide.topAnchor,
             constant: Constants.Dimension.verticalSmall
         ).isActive = true
         #if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
         // tvOS has its own style for `UIButton`
-        cancelBtn.widthAnchor.constraint(equalToConstant: Constants.Dimension.iconSmall).isActive = true
-        cancelBtn.heightAnchor.constraint(equalTo: cancelBtn.widthAnchor).isActive = true
+        cancelButton.widthAnchor.constraint(equalToConstant: Constants.Dimension.iconSmall).isActive = true
+        cancelButton.heightAnchor.constraint(equalTo: cancelButton.widthAnchor).isActive = true
         #endif
 
         pageContentView.translatesAutoresizingMaskIntoConstraints = false
@@ -116,8 +123,8 @@ public final class HelpPageViewController: UIPageViewController {
     }
 
     private func setupFocus() {
-        addFocusGuide(from: cancelBtn, to: view, direction: .bottom)
-        addFocusGuide(from: view, to: cancelBtn, direction: .top)
+        addFocusGuide(from: cancelButton, to: view, direction: .bottom)
+        addFocusGuide(from: view, to: cancelButton, direction: .top)
     }
 
     /// Setup gesture to control the offset change of `TipsViewController` in tvOS.
