@@ -65,29 +65,26 @@ public final class TipsViewController<T: TipsItemType>: UIViewController {
     public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         let previousTraitCollection = traitCollection
-        coordinator.animate(
-            alongsideTransition: { coordinatorContext in
-                UIView.animateKeyframes(
-                    withDuration: coordinatorContext.transitionDuration,
-                    delay: 0,
-                    options: .layoutSubviews,
-                    animations: {
-                        UIView.addKeyframe(
-                            withRelativeStartTime: 0,
-                            relativeDuration: 0.5,
-                            animations: { self.view.alpha = 0 }
-                        )
-                        UIView.addKeyframe(
-                            withRelativeStartTime: 0.5,
-                            relativeDuration: 0.5,
-                            animations: { self.view.alpha = 1 }
-                        )
-                    },
-                    completion: nil
+        coordinator.animate { context in
+            UIView.animateKeyframes(
+                withDuration: context.transitionDuration,
+                delay: 0,
+                options: .layoutSubviews
+            ) {
+                UIView.addKeyframe(
+                    withRelativeStartTime: 0,
+                    relativeDuration: 0.5,
+                    animations: { self.view.alpha = 0 }
                 )
-            },
-            completion: { _ in self.configureLayout(previousTraitCollection) }
-        )
+                UIView.addKeyframe(
+                    withRelativeStartTime: 0.5,
+                    relativeDuration: 0.5,
+                    animations: { self.view.alpha = 1 }
+                )
+            }
+        } completion: { [unowned self] _ in
+            configureLayout(previousTraitCollection)
+        }
     }
 
     private func configureLayout(_ previousTraitCollection: UITraitCollection?) {
