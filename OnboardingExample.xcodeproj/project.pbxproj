@@ -10,7 +10,6 @@
 		1905C06B253569DE00B99F34 /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905C06A253569DE00B99F34 /* UIPageControl.swift */; };
 		1905C06C253569DE00B99F34 /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905C06A253569DE00B99F34 /* UIPageControl.swift */; };
 		191733C1252EB953008C4FBF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733C0252EB953008C4FBF /* UIImage.swift */; };
-		191733D3252ED364008C4FBF /* LaunchScreen-tvOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191733D1252ED364008C4FBF /* LaunchScreen-tvOS.storyboard */; };
 		191733DA252ED384008C4FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A6358A252DC22600B96864 /* ViewController.swift */; };
 		191733DD252ED399008C4FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63586252DC22600B96864 /* AppDelegate.swift */; };
 		191733E0252ED3ED008C4FBF /* HelpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635EE252DD68700B96864 /* HelpPageViewController.swift */; };
@@ -40,7 +39,6 @@
 		19A635FD252DD68700B96864 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635F2252DD68700B96864 /* Image.swift */; };
 		19A635FE252DD68700B96864 /* TipsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635F3252DD68700B96864 /* TipsItem.swift */; };
 		19A635FF252DD68700B96864 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635F5252DD68700B96864 /* TipsView.swift */; };
-		19A63601252DD93C00B96864 /* LaunchScreen-iOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19A63600252DD93C00B96864 /* LaunchScreen-iOS.storyboard */; };
 		19A63603252DFBBE00B96864 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63602252DFBBE00B96864 /* Contants.swift */; };
 		19A63605252E043000B96864 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63604252E043000B96864 /* UIButton.swift */; };
 /* End PBXBuildFile section */
@@ -62,7 +60,6 @@
 		1905C06A253569DE00B99F34 /* UIPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControl.swift; sourceTree = "<group>"; };
 		191733C0252EB953008C4FBF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		191733C6252ED363008C4FBF /* OnboardingExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnboardingExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		191733D2252ED364008C4FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/LaunchScreen-tvOS.storyboard"; sourceTree = "<group>"; };
 		191733D4252ED364008C4FBF /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		191733F2252F527C008C4FBF /* UITraitCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITraitCollection.swift; sourceTree = "<group>"; };
 		191733F7252F553E008C4FBF /* HelpPageViewController+KeyCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HelpPageViewController+KeyCommands.swift"; sourceTree = "<group>"; };
@@ -82,7 +79,6 @@
 		19A635F2252DD68700B96864 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		19A635F3252DD68700B96864 /* TipsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsItem.swift; sourceTree = "<group>"; };
 		19A635F5252DD68700B96864 /* TipsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
-		19A63600252DD93C00B96864 /* LaunchScreen-iOS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "LaunchScreen-iOS.storyboard"; sourceTree = "<group>"; };
 		19A63602252DFBBE00B96864 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		19A63604252E043000B96864 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,8 +124,6 @@
 		19A63585252DC22600B96864 /* OnboardingExample */ = {
 			isa = PBXGroup;
 			children = (
-				191733D1252ED364008C4FBF /* LaunchScreen-tvOS.storyboard */,
-				19A63600252DD93C00B96864 /* LaunchScreen-iOS.storyboard */,
 				19A635BC252DC28D00B96864 /* OnboardingExample.entitlements */,
 				19A63586252DC22600B96864 /* AppDelegate.swift */,
 				19A6358A252DC22600B96864 /* ViewController.swift */,
@@ -282,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191733D3252ED364008C4FBF /* LaunchScreen-tvOS.storyboard in Resources */,
 				191733FC252F5EF7008C4FBF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19A63590252DC22700B96864 /* Assets.xcassets in Resources */,
-				19A63601252DD93C00B96864 /* LaunchScreen-iOS.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,17 +377,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		191733D1252ED364008C4FBF /* LaunchScreen-tvOS.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				191733D2252ED364008C4FBF /* Base */,
-			);
-			name = "LaunchScreen-tvOS.storyboard";
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		191733D6252ED364008C4FBF /* Debug */ = {
