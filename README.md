@@ -10,7 +10,7 @@
 
 `Onboarding` supports for iOS, macCatalyst and tvOS. The minimal system requirements are:
 
-iOS 11.0, macCatalyst 13.0+, tvOS 11.0
+iOS 12.0, macCatalyst 13.0+, tvOS 12.0
 
 ## Installation
 
@@ -20,7 +20,7 @@ Download the .zip from this repo and drag the `/Sources/Onboarding` folder into 
 
 #### Swift Package Manager
 
-In Xcode 11 or newer versions you can add packages by going to *File \> Swift Packages \> Add Package Dependency*. Copy in this repos [URL][1] and go from there.
+In Xcode 14 or newer versions you can add packages by going to *File \> Swift Packages \> Add Package Dependency*. Copy in this repos [URL][1] and go from there.
 
 ## Usage
 
