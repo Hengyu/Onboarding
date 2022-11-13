@@ -144,7 +144,7 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
 }
 
 extension TipsView {
-    open func configure<T: TipsItemType>(with tips: T) {
+    public func configure(with tips: some TipsItemType) {
         title = tips.title
         content = tips.content
         image = tips.image
