@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -205,7 +205,6 @@
 				191733C2252ED363008C4FBF /* Sources */,
 				191733C3252ED363008C4FBF /* Frameworks */,
 				191733C4252ED363008C4FBF /* Resources */,
-				1917340B25304858008C4FBF /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -293,7 +292,8 @@
 /* Begin PBXShellScriptBuildPhase section */
 		1917340A2530482D008C4FBF /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -308,24 +308,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [[ \"$(uname -m)\" == \"arm64\" ]]; then\n  export PATH=\"/opt/homebrew/bin:${PATH}\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed\"\nfi\n";
-		};
-		1917340B25304858008C4FBF /* Swift Lint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Lint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
