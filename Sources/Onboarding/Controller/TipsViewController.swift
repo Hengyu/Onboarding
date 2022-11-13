@@ -11,7 +11,7 @@ public final class TipsViewController<T: TipsItemType>: UIViewController {
 
     public var tips: T? {
         didSet {
-            if let tips = tips, tips != oldValue {
+            if let tips, tips != oldValue {
                 tipsView.configure(with: tips)
             }
         }
@@ -108,7 +108,7 @@ public final class TipsViewController<T: TipsItemType>: UIViewController {
         tipsView.frame = CGRect(origin: CGPoint.zero, size: view.bounds.size)
         tipsView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(tipsView)
-        if let tips = tips {
+        if let tips {
             tipsView.configure(with: tips)
         }
     }

@@ -249,11 +249,11 @@ public final class HelpPageViewController: UIPageViewController {
 
     @objc
     internal func dismissPage() {
-        if let nav = navigationController {
-            if nav.viewControllers.first !== self {
-                nav.popViewController(animated: true)
+        if let navigationController {
+            if navigationController.viewControllers.first !== self {
+                navigationController.popViewController(animated: true)
             } else {
-                nav.presentingViewController?.dismiss(animated: true, completion: nil)
+                navigationController.presentingViewController?.dismiss(animated: true, completion: nil)
             }
         } else {
             presentingViewController?.dismiss(animated: true, completion: nil)
