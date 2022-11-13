@@ -30,8 +30,7 @@ extension UIButton {
         #if os(tvOS)
         button.setImage(.close, for: .normal)
         #else
-        if #available(iOS 13.0, macCatalyst 13.0, *) {
-        } else {
+        if #unavailable(iOS 13.0, macCatalyst 13.0) {
             button.setImage(.close, for: .normal)
             button.tintColor = .darkGray
             button.backgroundColor = .buttonBackground
