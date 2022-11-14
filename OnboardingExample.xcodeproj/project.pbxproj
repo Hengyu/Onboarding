@@ -24,8 +24,6 @@
 		191733EA252ED3ED008C4FBF /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635ED252DD68700B96864 /* TipsViewController.swift */; };
 		191733F3252F527C008C4FBF /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733F2252F527C008C4FBF /* UITraitCollection.swift */; };
 		191733F5252F5280008C4FBF /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733F2252F527C008C4FBF /* UITraitCollection.swift */; };
-		191733F8252F553E008C4FBF /* HelpPageViewController+KeyCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733F7252F553E008C4FBF /* HelpPageViewController+KeyCommands.swift */; };
-		191733FA252F5548008C4FBF /* HelpPageViewController+KeyCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733F7252F553E008C4FBF /* HelpPageViewController+KeyCommands.swift */; };
 		191733FC252F5EF7008C4FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19A6358F252DC22700B96864 /* Assets.xcassets */; };
 		1917340E25304BE5008C4FBF /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */; };
 		1917341025304C38008C4FBF /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */; };
@@ -62,7 +60,6 @@
 		191733C6252ED363008C4FBF /* OnboardingExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnboardingExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		191733D4252ED364008C4FBF /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		191733F2252F527C008C4FBF /* UITraitCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITraitCollection.swift; sourceTree = "<group>"; };
-		191733F7252F553E008C4FBF /* HelpPageViewController+KeyCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HelpPageViewController+KeyCommands.swift"; sourceTree = "<group>"; };
 		191734082530478F008C4FBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		191734122530503D008C4FBF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -172,7 +169,6 @@
 			children = (
 				19A635ED252DD68700B96864 /* TipsViewController.swift */,
 				19A635EE252DD68700B96864 /* HelpPageViewController.swift */,
-				191733F7252F553E008C4FBF /* HelpPageViewController+KeyCommands.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,7 +312,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191733FA252F5548008C4FBF /* HelpPageViewController+KeyCommands.swift in Sources */,
 				191733EA252ED3ED008C4FBF /* TipsViewController.swift in Sources */,
 				191733E2252ED3ED008C4FBF /* TipsView.swift in Sources */,
 				191733E4252ED3ED008C4FBF /* UIColor.swift in Sources */,
@@ -339,7 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191733F8252F553E008C4FBF /* HelpPageViewController+KeyCommands.swift in Sources */,
 				19A635FF252DD68700B96864 /* TipsView.swift in Sources */,
 				19A6358B252DC22600B96864 /* ViewController.swift in Sources */,
 				19A635FE252DD68700B96864 /* TipsItem.swift in Sources */,

@@ -43,6 +43,7 @@ public final class HelpPageViewController: UIPageViewController {
         setupConstraints()
         setupPages()
         setupFocus()
+        setupKeyCommands()
         setupGesture()
     }
 
@@ -125,6 +126,32 @@ public final class HelpPageViewController: UIPageViewController {
     private func setupFocus() {
         addFocusGuide(from: cancelButton, to: view, direction: .bottom)
         addFocusGuide(from: view, to: cancelButton, direction: .top)
+    }
+
+    private func setupKeyCommands() {
+        let esc = UIKeyCommand(
+            input: UIKeyCommand.inputEscape,
+            modifierFlags: UIKeyModifierFlags(rawValue: 0),
+            action: #selector(dismissPage)
+        )
+        let backward = UIKeyCommand(
+            input: UIKeyCommand.inputLeftArrow,
+            modifierFlags: UIKeyModifierFlags(rawValue: 0),
+            action: #selector(selectBackwardPage)
+        )
+        let forward = UIKeyCommand(
+            input: UIKeyCommand.inputRightArrow,
+            modifierFlags: UIKeyModifierFlags(rawValue: 0),
+            action: #selector(selectForwardPage)
+        )
+        if #available(iOS 15.0, macCatalyst 15.0, tvOS 15.0, *) {
+            esc.wantsPriorityOverSystemBehavior = true
+            backward.wantsPriorityOverSystemBehavior = true
+            forward.wantsPriorityOverSystemBehavior = true
+        }
+        addKeyCommand(esc)
+        addKeyCommand(backward)
+        addKeyCommand(forward)
     }
 
     /// Setup gesture to control the offset change of `TipsViewController` in tvOS.
