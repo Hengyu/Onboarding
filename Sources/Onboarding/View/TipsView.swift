@@ -74,7 +74,11 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         titleLabel.textColor = .defaultLabel
         titleLabel.textAlignment = .left
         titleLabel.numberOfLines = 1
+        #if targetEnvironment(macCatalyst) || os(macOS)
+        titleLabel.font = .preferredFont(forTextStyle: .title1)
+        #else
         titleLabel.font = .preferredFont(forTextStyle: .headline)
+        #endif
 
         contentLabel.textColor = UIColor.defaultSecondaryLabel
         contentLabel.textAlignment = .left
