@@ -20,14 +20,8 @@ extension UIPageControl {
     @discardableResult
     internal func setProminentBackground() -> Bool {
         if #available(iOS 14.0, macCatalyst 14.0, tvOS 14.0, *) {
-            #if targetEnvironment(macCatalyst)
-            // Temporarily disable for macCatalyst since compiler will
-            // throw error when building for macCatalyst 13
-            return false
-            #else
             backgroundStyle = .prominent
             return true
-            #endif
         } else {
             #if os(tvOS)
             // looks like `UIPageControl` has its own visual effect on tvOS
