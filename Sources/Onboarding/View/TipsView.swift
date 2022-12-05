@@ -81,7 +81,7 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         #endif
 
         contentLabel.textColor = UIColor.defaultSecondaryLabel
-        contentLabel.textAlignment = .left
+        contentLabel.textAlignment = .natural
         contentLabel.numberOfLines = 0
         contentLabel.font = .preferredFont(forTextStyle: .body)
 
@@ -89,7 +89,7 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         imageView.backgroundColor = .clear
 
         childStackView.axis = .vertical
-        childStackView.alignment = .leading
+        childStackView.alignment = .fill
         childStackView.distribution = .fill
         childStackView.spacing = Constants.Dimension.baseUnit
         childStackView.addArrangedSubview(titleLabel)
