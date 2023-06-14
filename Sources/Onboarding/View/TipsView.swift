@@ -80,7 +80,11 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         titleLabel.textAlignment = .left
         titleLabel.numberOfLines = 1
         #if targetEnvironment(macCatalyst) || os(macOS)
-        titleLabel.font = .preferredFont(forTextStyle: .title1)
+        let descriptor = UIFont.preferredFont(forTextStyle: .title3).fontDescriptor
+        descriptor.addingAttributes(
+            [UIFontDescriptor.AttributeName.traits: [UIFontDescriptor.TraitKey.weight: UIFont.Weight.medium]]
+        )
+        titleLabel.font = UIFont(descriptor: descriptor, size: descriptor.pointSize)
         #else
         titleLabel.font = .preferredFont(forTextStyle: .headline)
         #endif
