@@ -1,16 +1,25 @@
 # Onboarding
 
-`Onboarding` provides a fluent user-interface for app onboarding experience.
-
-## Screenshots
+![](https://img.shields.io/badge/iOS-12%2B-green)
+![](https://img.shields.io/badge/tvOS-12%2B-green)
+![](https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white)
+![](https://img.shields.io/github/last-commit/hengyu/onboarding)
 
 <img src="/OnboardingExample/screenshot.JPEG" width="320"/>
 
+**Onboarding** provides a fluent user-interface for app onboarding experience.
+
+## Table of contents
+
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+
 ## Requirements
 
-`Onboarding` supports for iOS, macCatalyst and tvOS. The minimal system requirements are:
-
-iOS 12.0, macCatalyst 13.0+, tvOS 12.0
+- iOS 12.0+
+- tvOS 12.0+
 
 ## Installation
 
@@ -20,13 +29,13 @@ Download the .zip from this repo and drag the `/Sources/Onboarding` folder into 
 
 #### Swift Package Manager
 
-In Xcode 14 or newer versions you can add packages by going to *File \> Swift Packages \> Add Package Dependency*. Copy in this repos [URL][1] and go from there.
+[NSAbout](https://github.com/hengyu/Onboarding.git) could be installed via [Swift Package Manager](https://www.swift.org/package-manager/). Open Xcode and go to **File** -> **Add Packages...**, search `https://github.com/hengyu/Onboarding.git`, and add the package as one of your project's dependency.
 
 ## Usage
 
 `Onboarding` is super easy to get started with.
 
-Simply follow the usage in the [example file][2].
+Simply follow the usage in the [example file](/OnboardingExample/ViewController.swift).
 
 ```Swift
 import Onboarding
@@ -43,14 +52,6 @@ let helpPage: HelpPageViewController = .init(items: items)
 presentingViewController.present(helpPage, animated: true)
 ```
 
-## Contribution
-
-Contributions are welcomed, please feel free to submit pull requests.
-
 ## License
 
-`Onboarding` is published under MIT License. See the [LICENSE][3] file for more.
-
-[1]:	https://github.com/hengyu/Onboarding.git
-[2]:	/OnboardingExample/ViewController.swift
-[3]:	/LICENSE
+[Onboarding](https://github.com/hengyu/Onboarding) is released under the [MIT License](LICENSE).
