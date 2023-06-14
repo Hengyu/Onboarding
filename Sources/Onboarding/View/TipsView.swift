@@ -68,6 +68,11 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         setupConstraints()
     }
 
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updateConditionalLayout(using: traitCollection)
+    }
+
     private func setupComponents() {
         backgroundColor = .defaultBackground
 
@@ -130,12 +135,6 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        scrollView.directionalLayoutMargins = .init(
-            top: Constants.Dimension.verticalSmall,
-            leading: Constants.Dimension.horizontalRegular,
-            bottom: Constants.Dimension.verticalSmall,
-            trailing: Constants.Dimension.horizontalRegular
-        )
 
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.preservesSuperviewLayoutMargins = true
@@ -144,6 +143,21 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         stackView.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor).isActive = true
         stackView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor).isActive = true
+
+        updateConditionalLayout(using: traitCollection)
+    }
+
+    private func updateConditionalLayout(using traitCollection: UITraitCollection) {
+        switch traitCollection.userInterfaceIdiom {
+        case .pad, .phone:
+            scrollView.directionalLayoutMargins = Constants.Dimension.regularEdgeInsets.directional
+        case .mac, .tv:
+            scrollView.directionalLayoutMargins = Constants.Dimension.largeEdgeInsets.directional
+        case .carPlay, .unspecified:
+            fallthrough
+        @unknown default:
+            break
+        }
     }
 }
 

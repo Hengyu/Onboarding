@@ -167,11 +167,13 @@ public final class HelpPageViewController: UIPageViewController {
 
     private func updateConditionalLayout(using traitCollection: UITraitCollection) {
         switch traitCollection.userInterfaceIdiom {
-        case .mac, .pad, .phone:
+        case .pad, .phone:
             view.layoutMargins = traitCollection.needsLargeDisplay
-                ? Constants.Dimension.regularEdgeInsets
-                : Constants.Dimension.compactEdgeInsets
-        case .carPlay, .tv, .unspecified:
+            ? Constants.Dimension.regularEdgeInsets
+            : Constants.Dimension.compactEdgeInsets
+        case .mac, .tv:
+            view.layoutMargins = Constants.Dimension.largeEdgeInsets
+        case .carPlay, .unspecified:
             fallthrough
         @unknown default:
             break
@@ -229,7 +231,7 @@ public final class HelpPageViewController: UIPageViewController {
             gestureRecognizer.setTranslation(translation, in: gestureView)
 
             let inset = currentPage.adjustedContentInset
-            var offset =  currentPage.contentOffset
+            var offset = currentPage.contentOffset
 
             let maxOffsetY = max(
                 currentPage.contentSize.height - currentPage.visibleSize.height + inset.bottom,

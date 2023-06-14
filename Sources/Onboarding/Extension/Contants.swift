@@ -17,10 +17,12 @@ extension Constants {
         static let verticalTiny: CGFloat = baseUnit * 1.5
         static let verticalSmall: CGFloat = baseUnit * 2
         static let verticalRegular: CGFloat = baseUnit * 3
+        static let verticalLarge: CGFloat = baseUnit * 6
 
         static let horizontalTiny: CGFloat = verticalTiny
         static let horizontalSmall: CGFloat = verticalSmall
         static let horizontalRegular: CGFloat = verticalRegular
+        static let horizontalLarge: CGFloat = verticalLarge
 
         static let verticalPaddingTiny: CGFloat = baseUnit * 3
         static let verticalPaddingSmall: CGFloat = baseUnit * 4
@@ -46,6 +48,13 @@ extension Constants {
             left: horizontalRegular,
             bottom: verticalRegular,
             right: horizontalRegular
+        )
+
+        static let largeEdgeInsets: UIEdgeInsets = .init(
+            top: verticalRegular,
+            left: horizontalLarge,
+            bottom: verticalRegular,
+            right: horizontalLarge
         )
     }
 }

@@ -14,4 +14,8 @@ extension UIEdgeInsets {
         result.bottom = bottom
         return result
     }
+
+    var directional: NSDirectionalEdgeInsets {
+        .init(top: top, leading: left, bottom: bottom, trailing: right)
+    }
 }
