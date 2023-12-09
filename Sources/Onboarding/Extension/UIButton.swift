@@ -29,6 +29,8 @@ extension UIButton {
 
         #if os(tvOS)
         button.setImage(.close, for: .normal)
+        #elseif os(visionOS)
+        button.configuration = .bordered()
         #else
         if #unavailable(iOS 13.0, macCatalyst 13.0) {
             button.setImage(.close, for: .normal)
