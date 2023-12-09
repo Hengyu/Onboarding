@@ -20,7 +20,7 @@
 ## Requirements
 
 - Swift 5.9
-- iOS 12.0+, tvOS 12.0+, visionOS 1.0+
+- iOS 13.0+, tvOS 13.0+, visionOS 1.0+
 
 ## Installation
 
