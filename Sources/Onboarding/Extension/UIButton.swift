@@ -10,15 +10,11 @@ import UIKit
 extension UIButton.ButtonType {
 
     static var adaptiveClose: UIButton.ButtonType {
-        if #available(iOS 13.0, macCatalyst 13.0, tvOS 13.0, *) {
-            #if os(tvOS)
-            return .contactAdd
-            #else
-            return .close
-            #endif
-        } else {
-            return .system
-        }
+        #if os(tvOS)
+        return .contactAdd
+        #else
+        return .close
+        #endif
     }
 }
 
@@ -31,14 +27,6 @@ extension UIButton {
         button.setImage(.close, for: .normal)
         #elseif os(visionOS)
         button.configuration = .bordered()
-        #else
-        if #unavailable(iOS 13.0, macCatalyst 13.0) {
-            button.setImage(.close, for: .normal)
-            button.tintColor = .darkGray
-            button.backgroundColor = .buttonBackground
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = Constants.Dimension.iconSmall / 2
-        }
         #endif
 
         return button

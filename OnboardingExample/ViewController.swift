@@ -34,11 +34,7 @@ class ViewController: UIViewController {
         #if os(tvOS)
         view.backgroundColor = .clear
         #else
-        if #available(iOS 13.0, macCatalyst 13.0, *) {
-            view.backgroundColor = .systemBackground
-        } else {
-            view.backgroundColor = .white
-        }
+        view.backgroundColor = .systemBackground
         #endif
 
         if #available(iOS 15.0, tvOS 15.0, visionOS 1.0, *) {

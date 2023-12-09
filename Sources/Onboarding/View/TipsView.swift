@@ -42,11 +42,7 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
     }
 
     public var visibleSize: CGSize {
-        if #available(iOS 12.0, macCatalyst 13.0, tvOS 12.0, *) {
-            return scrollView.visibleSize
-        } else {
-            return scrollView.bounds.size
-        }
+        scrollView.visibleSize
     }
 
     private let scrollView: UIScrollView = .init(frame: .zero)

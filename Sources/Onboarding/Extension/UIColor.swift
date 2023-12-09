@@ -12,36 +12,24 @@ extension UIColor {
 
     internal class var defaultBackground: UIColor {
         #if os(tvOS)
-        return .clear
+        .clear
         #else
-        if #available(iOS 13.0, macCatalyst 13.0, *) {
-            return .systemBackground
-        } else {
-            return .white
-        }
+        .systemBackground
         #endif
     }
 
     internal class var groupedBackground: UIColor {
-        if #available(iOS 13.0, tvOS 13.0, *) {
-            #if os(tvOS)
-            return UIColor { trait in
-                if trait.userInterfaceStyle == .dark {
-                    return UIColor(white: 0.4, alpha: 0.3)
-                } else {
-                    return UIColor(white: 0.6, alpha: 0.3)
-                }
+        #if os(tvOS)
+        return UIColor { trait in
+            if trait.userInterfaceStyle == .dark {
+                return UIColor(white: 0.4, alpha: 0.3)
+            } else {
+                return UIColor(white: 0.6, alpha: 0.3)
             }
-            #else
-            return .tertiarySystemGroupedBackground
-            #endif
-        } else {
-            #if os(tvOS) || os(visionOS)
-            return UIColor(white: 0.6, alpha: 0.3)
-            #else
-            return .groupTableViewBackground
-            #endif
         }
+        #else
+        return .tertiarySystemGroupedBackground
+        #endif
     }
 
     internal class var buttonBackground: UIColor {
@@ -49,23 +37,11 @@ extension UIColor {
     }
 
     internal class var defaultLabel: UIColor {
-        if #available(iOS 13.0, macCatalyst 13.0, tvOS 13.0, *) {
-            return .label
-        } else {
-            #if os(tvOS)
-            return .black
-            #else
-            return .darkText
-            #endif
-        }
+        .label
     }
 
     internal class var defaultSecondaryLabel: UIColor {
-        if #available(iOS 13.0, macCatalyst 13.0, tvOS 13.0, *) {
-            return .secondaryLabel
-        } else {
-            return .darkGray
-        }
+        .secondaryLabel
     }
 
     internal class var currentPageIndicator: UIColor {
@@ -73,11 +49,7 @@ extension UIColor {
     }
 
     internal class var pageIndicator: UIColor {
-        if #available(iOS 13.0, macCatalyst 13.0, tvOS 13.0, *) {
-            return .tertiaryLabel
-        } else {
-            return .lightGray
-        }
+        .tertiaryLabel
     }
 }
 
