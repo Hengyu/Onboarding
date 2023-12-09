@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/badge/iOS-12%2B-green)
 ![](https://img.shields.io/badge/tvOS-12%2B-green)
+![](https://img.shields.io/badge/visionOS-1%2B-green)
 ![](https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white)
 ![](https://img.shields.io/github/last-commit/hengyu/onboarding)
 
@@ -18,8 +19,8 @@
 
 ## Requirements
 
-- iOS 12.0+
-- tvOS 12.0+
+- Swift 5.9
+- iOS 12.0+, tvOS 12.0+, visionOS 1.0+
 
 ## Installation
 
@@ -29,7 +30,7 @@ Download the .zip from this repo and drag the `/Sources/Onboarding` folder into 
 
 #### Swift Package Manager
 
-[NSAbout](https://github.com/hengyu/Onboarding.git) could be installed via [Swift Package Manager](https://www.swift.org/package-manager/). Open Xcode and go to **File** -> **Add Packages...**, search `https://github.com/hengyu/Onboarding.git`, and add the package as one of your project's dependency.
+[Onboarding](https://github.com/hengyu/Onboarding.git) could be installed via [Swift Package Manager](https://www.swift.org/package-manager/). Open Xcode and go to **File** -> **Add Packages...**, search `https://github.com/hengyu/Onboarding.git`, and add the package as one of your project's dependency.
 
 ## Usage
 
@@ -54,4 +55,4 @@ presentingViewController.present(helpPage, animated: true)
 
 ## License
 
-[Onboarding](https://github.com/hengyu/Onboarding) is released under the [MIT License](LICENSE).
+**Onboarding** is released under the [MIT License](LICENSE).
