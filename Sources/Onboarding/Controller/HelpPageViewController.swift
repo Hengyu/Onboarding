@@ -8,12 +8,10 @@
 import UIKit
 
 public final class HelpPageViewController: UIPageViewController {
-
     public let items: [TipsItem]
 
     private var currentPage: Int = 0
     private var tipsViewControllers: [TipsViewController<TipsItem>] = []
-
     private let cancelButton: UIButton = .makeClose()
     private let pageContentView: UIVisualEffectView = .init(effect: UIBlurEffect(style: .light))
     private let pageControl: UIPageControl = .init(frame: .zero)
@@ -45,20 +43,24 @@ public final class HelpPageViewController: UIPageViewController {
         setupFocus()
         setupKeyCommands()
         setupGesture()
+        registerTraitsUpdate()
     }
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         // reset the cancel button's visibility due to
         // the view controller could be reused in elsewhere
         cancelButton.isHidden = navigationController != nil
     }
 
+    #if !os(visionOS)
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        updateConditionalLayout(using: traitCollection)
+        if #unavailable(iOS 17.0, tvOS 17.0) {
+            updateConditionalLayout(using: traitCollection)
+        }
     }
+    #endif
 
     private func setupComponents() {
         view.backgroundColor = .defaultBackground
@@ -163,6 +165,14 @@ public final class HelpPageViewController: UIPageViewController {
         let swipeGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
         view.addGestureRecognizer(swipeGesture)
         #endif
+    }
+
+    private func registerTraitsUpdate() {
+        if #available(iOS 17.0, tvOS 17.0, visionOS 1.0, *) {
+            registerForTraitChanges([UITraitHorizontalSizeClass.self]) { (traitEnvironment: Self, _) in
+                self.updateConditionalLayout(using: traitEnvironment.traitCollection)
+            }
+        }
     }
 
     private func updateConditionalLayout(using traitCollection: UITraitCollection) {
