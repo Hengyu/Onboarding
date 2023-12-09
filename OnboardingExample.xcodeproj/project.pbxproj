@@ -8,25 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1905C06B253569DE00B99F34 /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905C06A253569DE00B99F34 /* UIPageControl.swift */; };
-		1905C06C253569DE00B99F34 /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905C06A253569DE00B99F34 /* UIPageControl.swift */; };
 		191733C1252EB953008C4FBF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733C0252EB953008C4FBF /* UIImage.swift */; };
-		191733DA252ED384008C4FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A6358A252DC22600B96864 /* ViewController.swift */; };
-		191733DD252ED399008C4FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63586252DC22600B96864 /* AppDelegate.swift */; };
-		191733E0252ED3ED008C4FBF /* HelpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635EE252DD68700B96864 /* HelpPageViewController.swift */; };
-		191733E1252ED3ED008C4FBF /* TipsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635F3252DD68700B96864 /* TipsItem.swift */; };
-		191733E2252ED3ED008C4FBF /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635F5252DD68700B96864 /* TipsView.swift */; };
-		191733E3252ED3ED008C4FBF /* TipsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635F1252DD68700B96864 /* TipsItemType.swift */; };
-		191733E4252ED3ED008C4FBF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635E9252DD68700B96864 /* UIColor.swift */; };
-		191733E5252ED3ED008C4FBF /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63604252E043000B96864 /* UIButton.swift */; };
-		191733E6252ED3ED008C4FBF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733C0252EB953008C4FBF /* UIImage.swift */; };
-		191733E8252ED3ED008C4FBF /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635F2252DD68700B96864 /* Image.swift */; };
-		191733E9252ED3ED008C4FBF /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63602252DFBBE00B96864 /* Contants.swift */; };
-		191733EA252ED3ED008C4FBF /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635ED252DD68700B96864 /* TipsViewController.swift */; };
 		191733F3252F527C008C4FBF /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733F2252F527C008C4FBF /* UITraitCollection.swift */; };
-		191733F5252F5280008C4FBF /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733F2252F527C008C4FBF /* UITraitCollection.swift */; };
-		191733FC252F5EF7008C4FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19A6358F252DC22700B96864 /* Assets.xcassets */; };
 		1917340E25304BE5008C4FBF /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */; };
-		1917341025304C38008C4FBF /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */; };
 		19A63587252DC22600B96864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63586252DC22600B96864 /* AppDelegate.swift */; };
 		19A6358B252DC22600B96864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A6358A252DC22600B96864 /* ViewController.swift */; };
 		19A63590252DC22700B96864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19A6358F252DC22700B96864 /* Assets.xcassets */; };
@@ -57,7 +41,6 @@
 /* Begin PBXFileReference section */
 		1905C06A253569DE00B99F34 /* UIPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControl.swift; sourceTree = "<group>"; };
 		191733C0252EB953008C4FBF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		191733C6252ED363008C4FBF /* OnboardingExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnboardingExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		191733D4252ED364008C4FBF /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		191733F2252F527C008C4FBF /* UITraitCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITraitCollection.swift; sourceTree = "<group>"; };
 		191734082530478F008C4FBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -81,13 +64,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		191733C3252ED363008C4FBF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		19A63580252DC22600B96864 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				19A63583252DC22600B96864 /* OnboardingExample-iOS.app */,
-				191733C6252ED363008C4FBF /* OnboardingExample-tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,23 +169,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		191733C5252ED363008C4FBF /* OnboardingExample-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 191733D5252ED364008C4FBF /* Build configuration list for PBXNativeTarget "OnboardingExample-tvOS" */;
-			buildPhases = (
-				191733C2252ED363008C4FBF /* Sources */,
-				191733C3252ED363008C4FBF /* Frameworks */,
-				191733C4252ED363008C4FBF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "OnboardingExample-tvOS";
-			productName = TVExample;
-			productReference = 191733C6252ED363008C4FBF /* OnboardingExample-tvOS.app */;
-			productType = "com.apple.product-type.application";
-		};
 		19A63582252DC22600B96864 /* OnboardingExample-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19A63597252DC22700B96864 /* Build configuration list for PBXNativeTarget "OnboardingExample-iOS" */;
@@ -240,9 +198,6 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					191733C5252ED363008C4FBF = {
-						CreatedOnToolsVersion = 12.0;
-					};
 					19A63582252DC22600B96864 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -262,20 +217,11 @@
 			projectRoot = "";
 			targets = (
 				19A63582252DC22600B96864 /* OnboardingExample-iOS */,
-				191733C5252ED363008C4FBF /* OnboardingExample-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		191733C4252ED363008C4FBF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				191733FC252F5EF7008C4FBF /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		19A63581252DC22600B96864 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,28 +255,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		191733C2252ED363008C4FBF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				191733EA252ED3ED008C4FBF /* TipsViewController.swift in Sources */,
-				191733E2252ED3ED008C4FBF /* TipsView.swift in Sources */,
-				191733E4252ED3ED008C4FBF /* UIColor.swift in Sources */,
-				191733F5252F5280008C4FBF /* UITraitCollection.swift in Sources */,
-				191733E1252ED3ED008C4FBF /* TipsItem.swift in Sources */,
-				191733E5252ED3ED008C4FBF /* UIButton.swift in Sources */,
-				191733E3252ED3ED008C4FBF /* TipsItemType.swift in Sources */,
-				191733E0252ED3ED008C4FBF /* HelpPageViewController.swift in Sources */,
-				191733E6252ED3ED008C4FBF /* UIImage.swift in Sources */,
-				1905C06C253569DE00B99F34 /* UIPageControl.swift in Sources */,
-				191733DD252ED399008C4FBF /* AppDelegate.swift in Sources */,
-				1917341025304C38008C4FBF /* UIEdgeInsets.swift in Sources */,
-				191733E8252ED3ED008C4FBF /* Image.swift in Sources */,
-				191733DA252ED384008C4FBF /* ViewController.swift in Sources */,
-				191733E9252ED3ED008C4FBF /* Contants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		19A6357F252DC22600B96864 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,48 +280,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		191733D6252ED364008C4FBF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "OnboardingExample/Info-tvOS.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hengyu.OnboardingExample-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-			};
-			name = Debug;
-		};
-		191733D7252ED364008C4FBF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "OnboardingExample/Info-tvOS.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hengyu.OnboardingExample-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-			};
-			name = Release;
-		};
 		19A63595252DC22700B96864 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -533,11 +415,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hengyu.OnboardingExample-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2,3,6,7";
 			};
 			name = Debug;
 		};
@@ -558,26 +441,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hengyu.OnboardingExample-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2,3,6,7";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		191733D5252ED364008C4FBF /* Build configuration list for PBXNativeTarget "OnboardingExample-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				191733D6252ED364008C4FBF /* Debug */,
-				191733D7252ED364008C4FBF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		19A6357E252DC22600B96864 /* Build configuration list for PBXProject "OnboardingExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

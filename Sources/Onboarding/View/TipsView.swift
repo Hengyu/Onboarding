@@ -155,9 +155,9 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         switch traitCollection.userInterfaceIdiom {
         case .pad, .phone:
             scrollView.directionalLayoutMargins = Constants.Dimension.regularEdgeInsets.directional
-        case .mac, .tv:
+        case .mac, .tv, .vision, .carPlay:
             scrollView.directionalLayoutMargins = Constants.Dimension.largeEdgeInsets.directional
-        case .carPlay, .unspecified:
+        case .unspecified:
             fallthrough
         @unknown default:
             break

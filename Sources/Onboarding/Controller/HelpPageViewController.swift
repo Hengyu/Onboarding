@@ -91,7 +91,7 @@ public final class HelpPageViewController: UIPageViewController {
             equalTo: view.safeAreaLayoutGuide.topAnchor,
             constant: Constants.Dimension.verticalSmall
         ).isActive = true
-        #if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
+        #if os(iOS) || os(visionOS) || targetEnvironment(macCatalyst)
         // tvOS has its own style for `UIButton`
         cancelButton.widthAnchor.constraint(equalToConstant: Constants.Dimension.iconSmall).isActive = true
         cancelButton.heightAnchor.constraint(equalTo: cancelButton.widthAnchor).isActive = true
@@ -171,9 +171,9 @@ public final class HelpPageViewController: UIPageViewController {
             view.layoutMargins = traitCollection.needsLargeDisplay
             ? Constants.Dimension.regularEdgeInsets
             : Constants.Dimension.compactEdgeInsets
-        case .mac, .tv:
+        case .mac, .tv, .vision, .carPlay:
             view.layoutMargins = Constants.Dimension.largeEdgeInsets
-        case .carPlay, .unspecified:
+        case .unspecified:
             fallthrough
         @unknown default:
             break

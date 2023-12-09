@@ -41,6 +41,9 @@ class ViewController: UIViewController {
         }
         #endif
 
+        if #available(iOS 15.0, tvOS 15.0, visionOS 1.0, *) {
+            button.configuration = .bordered()
+        }
         button.setTitle("Show Help Page", for: .normal)
         button.addTarget(self, action: #selector(showHelpPage(_:)), for: .primaryActionTriggered)
         view.addSubview(button)

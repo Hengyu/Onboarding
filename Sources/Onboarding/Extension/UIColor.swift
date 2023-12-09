@@ -36,7 +36,7 @@ extension UIColor {
             return .tertiarySystemGroupedBackground
             #endif
         } else {
-            #if os(tvOS)
+            #if os(tvOS) || os(visionOS)
             return UIColor(white: 0.6, alpha: 0.3)
             #else
             return .groupTableViewBackground
