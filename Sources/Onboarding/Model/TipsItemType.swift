@@ -21,6 +21,6 @@ public protocol ImageProviding {
 }
 
 public protocol TipsItemType: Hashable,
-    ImageProviding,
-    TitleContentProviding,
-    URLProviding { }
+                              ImageProviding,
+                              TitleContentProviding,
+                              URLProviding { }

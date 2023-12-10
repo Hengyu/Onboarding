@@ -169,8 +169,8 @@ public final class HelpPageViewController: UIPageViewController {
 
     private func registerTraitsUpdate() {
         if #available(iOS 17.0, tvOS 17.0, visionOS 1.0, *) {
-            registerForTraitChanges([UITraitHorizontalSizeClass.self]) { (traitEnvironment: Self, _) in
-                self.updateConditionalLayout(using: traitEnvironment.traitCollection)
+            registerForTraitChanges([UITraitHorizontalSizeClass.self]) { [unowned self] (traitEnvironment: Self, _) in
+                updateConditionalLayout(using: traitEnvironment.traitCollection)
             }
         }
     }

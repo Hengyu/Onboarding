@@ -5,6 +5,7 @@
 //  Created by hengyu on 2020/10/7.
 //
 
+import SwiftUI
 import UIKit
 
 class ViewController: UIViewController {
@@ -50,6 +51,11 @@ class ViewController: UIViewController {
 
     @objc
     private func showHelpPage(_ sender: UIButton) {
-        present(helpPage, animated: true)
+        if #available(iOS 15.0, macCatalyst 15.0, tvOS 15.0, visionOS 1.0, *) {
+            let helpView = HelpPageViewControllerV2(items: items)
+            present(helpView, animated: true)
+        } else {
+            present(helpPage, animated: true)
+        }
     }
 }

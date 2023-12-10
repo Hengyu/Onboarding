@@ -62,38 +62,6 @@ public final class TipsViewController<T: TipsItemType>: UIViewController {
         configureSubviews()
     }
 
-    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        let previousTraitCollection = traitCollection
-        coordinator.animate { context in
-            UIView.animateKeyframes(
-                withDuration: context.transitionDuration,
-                delay: 0,
-                options: .layoutSubviews
-            ) {
-                UIView.addKeyframe(
-                    withRelativeStartTime: 0,
-                    relativeDuration: 0.5,
-                    animations: { self.view.alpha = 0 }
-                )
-                UIView.addKeyframe(
-                    withRelativeStartTime: 0.5,
-                    relativeDuration: 0.5,
-                    animations: { self.view.alpha = 1 }
-                )
-            }
-        } completion: { [unowned self] _ in
-            configureLayout(previousTraitCollection)
-        }
-    }
-
-    private func configureLayout(_ previousTraitCollection: UITraitCollection?) {
-        //  iPad will not receive 'traitCollectionDidChange:' when orientation changes
-        if traitCollection.userInterfaceIdiom == .pad {
-            tipsView.traitCollectionDidChange(previousTraitCollection)
-        }
-    }
-
     private func configureSubviews() {
         separatorLine.frame = CGRect(x: view.bounds.width - 1, y: 0, width: 1, height: view.bounds.height)
         separatorLine.autoresizingMask = [.flexibleLeftMargin, .flexibleHeight]

@@ -11,6 +11,7 @@
 		191733C1252EB953008C4FBF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733C0252EB953008C4FBF /* UIImage.swift */; };
 		191733F3252F527C008C4FBF /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733F2252F527C008C4FBF /* UITraitCollection.swift */; };
 		1917340E25304BE5008C4FBF /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */; };
+		195636E82B24B2FA00E6439C /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195636E72B24B2FA00E6439C /* HelpView.swift */; };
 		19A63587252DC22600B96864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63586252DC22600B96864 /* AppDelegate.swift */; };
 		19A6358B252DC22600B96864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A6358A252DC22600B96864 /* ViewController.swift */; };
 		19A63590252DC22700B96864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19A6358F252DC22700B96864 /* Assets.xcassets */; };
@@ -23,6 +24,9 @@
 		19A635FF252DD68700B96864 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A635F5252DD68700B96864 /* TipsView.swift */; };
 		19A63603252DFBBE00B96864 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63602252DFBBE00B96864 /* Contants.swift */; };
 		19A63605252E043000B96864 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A63604252E043000B96864 /* UIButton.swift */; };
+		19C3BF7A2B2560AD00B09EC8 /* SwiftTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3BF792B2560AD00B09EC8 /* SwiftTipsView.swift */; };
+		19C3BF7C2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3BF7B2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift */; };
+		19C3BF7E2B2594AA00B09EC8 /* Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3BF7D2B2594AA00B09EC8 /* Compatible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +50,7 @@
 		191734082530478F008C4FBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		191734122530503D008C4FBF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		195636E72B24B2FA00E6439C /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		19A63583252DC22600B96864 /* OnboardingExample-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnboardingExample-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A63586252DC22600B96864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19A6358A252DC22600B96864 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +66,9 @@
 		19A635F5252DD68700B96864 /* TipsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		19A63602252DFBBE00B96864 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		19A63604252E043000B96864 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		19C3BF792B2560AD00B09EC8 /* SwiftTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTipsView.swift; sourceTree = "<group>"; };
+		19C3BF7B2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPageViewControllerV2.swift; sourceTree = "<group>"; };
+		19C3BF7D2B2594AA00B09EC8 /* Compatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195636E62B24B2B400E6439C /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				19C3BF7D2B2594AA00B09EC8 /* Compatible.swift */,
+				19C3BF7B2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift */,
+				195636E72B24B2FA00E6439C /* HelpView.swift */,
+				19C3BF792B2560AD00B09EC8 /* SwiftTipsView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		19A6357A252DC22600B96864 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +136,7 @@
 		19A635E7252DD68700B96864 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				195636E62B24B2B400E6439C /* SwiftUI */,
 				19A635E8252DD68700B96864 /* Extension */,
 				19A635EC252DD68700B96864 /* Controller */,
 				19A635F0252DD68700B96864 /* Model */,
@@ -260,9 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				19A635FF252DD68700B96864 /* TipsView.swift in Sources */,
+				19C3BF7A2B2560AD00B09EC8 /* SwiftTipsView.swift in Sources */,
 				19A6358B252DC22600B96864 /* ViewController.swift in Sources */,
 				19A635FE252DD68700B96864 /* TipsItem.swift in Sources */,
 				191733F3252F527C008C4FBF /* UITraitCollection.swift in Sources */,
+				19C3BF7E2B2594AA00B09EC8 /* Compatible.swift in Sources */,
 				19A635F6252DD68700B96864 /* UIColor.swift in Sources */,
 				19A635FC252DD68700B96864 /* TipsItemType.swift in Sources */,
 				19A635F9252DD68700B96864 /* TipsViewController.swift in Sources */,
@@ -272,6 +294,8 @@
 				19A63587252DC22600B96864 /* AppDelegate.swift in Sources */,
 				1917340E25304BE5008C4FBF /* UIEdgeInsets.swift in Sources */,
 				19A635FD252DD68700B96864 /* Image.swift in Sources */,
+				19C3BF7C2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift in Sources */,
+				195636E82B24B2FA00E6439C /* HelpView.swift in Sources */,
 				191733C1252EB953008C4FBF /* UIImage.swift in Sources */,
 				19A63605252E043000B96864 /* UIButton.swift in Sources */,
 			);

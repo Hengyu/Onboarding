@@ -53,6 +53,33 @@ let helpPage: HelpPageViewController = .init(items: items)
 presentingViewController.present(helpPage, animated: true)
 ```
 
+We also provide `HelpView` for buiding onboarding page in SwiftUI:
+
+```Swift
+import Onboarding
+
+public struct SettingsView: View {
+    @State var presentsOnboarding: Bool = false
+    let items: [TipsItem] = [
+        .init(title: "Intro", content: "This is the summary of the app", image: UIImage(named: "intro"))
+    ]
+
+    public var body: some View {
+        VStack {
+            Button {
+                presentsOnboarding = true
+            } label: {
+                Text("Show onboarding")
+            }
+        }
+        .sheet(isPresented: $presentsOnboarding) {
+            HelpView(items: items)
+        }
+    }
+}
+
+```
+
 ## License
 
 **Onboarding** is released under the [MIT License](LICENSE).

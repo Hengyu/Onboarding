@@ -64,10 +64,14 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         setupConstraints()
     }
 
+    #if !os(visionOS)
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        updateConditionalLayout(using: traitCollection)
+        if #unavailable(iOS 17.0, tvOS 17.0) {
+            updateConditionalLayout(using: traitCollection)
+        }
     }
+    #endif
 
     private func setupComponents() {
         backgroundColor = .defaultBackground
@@ -113,21 +117,20 @@ open class TipsView: UIView, UIFocusItemScrollableContainer {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(stackView)
         addSubview(scrollView)
+
+        if #available(iOS 17.0, tvOS 17.0, visionOS 1.0, *) {
+            registerForTraitChanges([UITraitUserInterfaceIdiom.self]) { [unowned self] (traitEnvironment: Self, _) in
+                updateConditionalLayout(using: traitEnvironment.traitCollection)
+            }
+        }
     }
 
     private func setupConstraints() {
         titleLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
 
-        #if targetEnvironment(macCatalyst) || os(macOS)
-        let multiplier: CGFloat = 1 / 2.0
-        #elseif os(tvOS)
-        let multiplier: CGFloat = 4 / 7.0
-        #else
-        let multiplier: CGFloat = UIDevice.current.userInterfaceIdiom == .phone ? 2 / 3.0 : 3 / 5.0
-        #endif
         imageView.heightAnchor.constraint(
             equalTo: scrollView.frameLayoutGuide.heightAnchor,
-            multiplier: multiplier
+            multiplier: getImageRatio(isHorizontalCompact: traitCollection.horizontalSizeClass == .compact)
         ).isActive = true
 
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -167,4 +170,14 @@ extension TipsView {
         content = tips.content
         image = tips.image
     }
+}
+
+func getImageRatio(isHorizontalCompact: Bool) -> CGFloat {
+    #if targetEnvironment(macCatalyst) || os(macOS)
+    1 / 2.0
+    #elseif os(tvOS)
+    4 / 7.0
+    #else
+    isHorizontalCompact ? 2 / 3.0 : 3 / 5.0
+    #endif
 }

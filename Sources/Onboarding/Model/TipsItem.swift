@@ -7,11 +7,15 @@
 
 import Foundation
 
-public struct TipsItem: TipsItemType {
+public struct TipsItem: TipsItemType, Identifiable {
     public let title: String
     public let content: String
     public let url: URL?
     public let image: OBImage?
+
+    public var id: Int {
+        hashValue
+    }
 
     public init(title: String, content: String, url: URL? = nil, image: OBImage? = nil) {
         self.title = title
@@ -28,10 +32,10 @@ public struct TipsItem: TipsItemType {
     }
 
     public static func == (lhs: TipsItem, rhs: TipsItem) -> Bool {
-        lhs.title == rhs.title
-            && lhs.content == rhs.content
-            && lhs.url == rhs.url
-            && lhs.image == rhs.image
+        lhs.title == rhs.title &&
+        lhs.content == rhs.content &&
+        lhs.url == rhs.url &&
+        lhs.image == rhs.image
     }
 }
 
