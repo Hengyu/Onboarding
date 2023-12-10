@@ -25,7 +25,7 @@ extension UIButton {
         let button = UIButton(type: .adaptiveClose)
 
         #if os(tvOS)
-        button.setImage(.close, for: .normal)
+        button.setImage(UIImage(systemName: "xmark"), for: .normal)
         #elseif os(visionOS)
         button.configuration = .bordered()
         #endif

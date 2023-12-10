@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1905C06B253569DE00B99F34 /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905C06A253569DE00B99F34 /* UIPageControl.swift */; };
-		191733C1252EB953008C4FBF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733C0252EB953008C4FBF /* UIImage.swift */; };
 		191733F3252F527C008C4FBF /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191733F2252F527C008C4FBF /* UITraitCollection.swift */; };
 		1917340E25304BE5008C4FBF /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */; };
 		195636E82B24B2FA00E6439C /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195636E72B24B2FA00E6439C /* HelpView.swift */; };
@@ -44,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		1905C06A253569DE00B99F34 /* UIPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControl.swift; sourceTree = "<group>"; };
-		191733C0252EB953008C4FBF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		191733D4252ED364008C4FBF /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		191733F2252F527C008C4FBF /* UITraitCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITraitCollection.swift; sourceTree = "<group>"; };
 		191734082530478F008C4FBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				19A635E9252DD68700B96864 /* UIColor.swift */,
-				191733C0252EB953008C4FBF /* UIImage.swift */,
 				19A63604252E043000B96864 /* UIButton.swift */,
 				19A63602252DFBBE00B96864 /* Contants.swift */,
 				191733F2252F527C008C4FBF /* UITraitCollection.swift */,
@@ -296,7 +293,6 @@
 				19A635FD252DD68700B96864 /* Image.swift in Sources */,
 				19C3BF7C2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift in Sources */,
 				195636E82B24B2FA00E6439C /* HelpView.swift in Sources */,
-				191733C1252EB953008C4FBF /* UIImage.swift in Sources */,
 				19A63605252E043000B96864 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
