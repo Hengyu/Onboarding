@@ -1,7 +1,9 @@
 # Onboarding
 
-![](https://img.shields.io/badge/iOS-12%2B-green)
-![](https://img.shields.io/badge/tvOS-12%2B-green)
+![](https://img.shields.io/badge/iOS-13%2B-green)
+![](https://img.shields.io/badge/macCatalyst-13%2B-green)
+![](https://img.shields.io/badge/macOS-12%2B-green)
+![](https://img.shields.io/badge/tvOS-13%2B-green)
 ![](https://img.shields.io/badge/visionOS-1%2B-green)
 ![](https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white)
 ![](https://img.shields.io/github/last-commit/hengyu/onboarding)
@@ -20,7 +22,8 @@
 ## Requirements
 
 - Swift 5.9
-- iOS 13.0+, tvOS 13.0+, visionOS 1.0+
+- **For UIKit.** iOS 13.0+, macCatalyst 13.0+, tvOS 13.0+, visionOS 1.0+
+- **For SwiftUI.** iOS 15.0+, macOS 12.0+, tvOS 15.0+, visionOS 1.0+ 
 
 ## Installation
 

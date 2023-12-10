@@ -5,6 +5,7 @@
 //  Created by hengyu on 2020/10/8.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 private class CustomImage {
@@ -249,3 +250,4 @@ extension UIImage {
     static let close: UIImage = CustomImage.imageOfClose()
     #endif
 }
+#endif

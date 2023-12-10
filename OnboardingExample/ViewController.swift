@@ -5,7 +5,7 @@
 //  Created by hengyu on 2020/10/7.
 //
 
-import SwiftUI
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 
 class ViewController: UIViewController {
@@ -59,3 +59,4 @@ class ViewController: UIViewController {
         }
     }
 }
+#endif

@@ -5,7 +5,10 @@
 //  Created by hengyu on 2020/10/7.
 //
 
+import CoreGraphics
+#if canImport(UIKit)
 import UIKit
+#endif
 
 internal enum Constants { }
 
@@ -35,26 +38,30 @@ extension Constants {
         static let iconTiny: CGFloat = verticalPaddingTiny
         static let iconSmall: CGFloat = verticalPaddingSmall
         static let iconRegular: CGFloat = verticalPaddingRegular
-
-        static let compactEdgeInsets: UIEdgeInsets = .init(
-            top: verticalSmall,
-            left: horizontalSmall,
-            bottom: verticalSmall,
-            right: horizontalSmall
-        )
-
-        static let regularEdgeInsets: UIEdgeInsets = .init(
-            top: verticalRegular,
-            left: horizontalRegular,
-            bottom: verticalRegular,
-            right: horizontalRegular
-        )
-
-        static let largeEdgeInsets: UIEdgeInsets = .init(
-            top: verticalRegular,
-            left: horizontalLarge,
-            bottom: verticalRegular,
-            right: horizontalLarge
-        )
     }
 }
+
+#if canImport(UIKit)
+extension Constants.Dimension {
+    static let compactEdgeInsets: UIEdgeInsets = .init(
+        top: verticalSmall,
+        left: horizontalSmall,
+        bottom: verticalSmall,
+        right: horizontalSmall
+    )
+
+    static let regularEdgeInsets: UIEdgeInsets = .init(
+        top: verticalRegular,
+        left: horizontalRegular,
+        bottom: verticalRegular,
+        right: horizontalRegular
+    )
+
+    static let largeEdgeInsets: UIEdgeInsets = .init(
+        top: verticalRegular,
+        left: horizontalLarge,
+        bottom: verticalRegular,
+        right: horizontalLarge
+    )
+}
+#endif

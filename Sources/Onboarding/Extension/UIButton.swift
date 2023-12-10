@@ -5,6 +5,7 @@
 //  Created by hengyu on 2020/10/7.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UIButton.ButtonType {
@@ -32,3 +33,4 @@ extension UIButton {
         return button
     }
 }
+#endif

@@ -5,6 +5,7 @@
 //  Created by hengyu on 2020/10/7.
 //
 
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 
 public final class HelpPageViewController: UIPageViewController {
@@ -358,3 +359,4 @@ extension HelpPageViewController: UIPageViewControllerDataSource, UIPageViewCont
         return nil
     }
 }
+#endif

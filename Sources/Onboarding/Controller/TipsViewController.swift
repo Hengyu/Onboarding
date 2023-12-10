@@ -5,6 +5,7 @@
 //  Created by hengyu on 2020/10/7.
 //
 
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 
 public final class TipsViewController<T: TipsItemType>: UIViewController {
@@ -78,3 +79,4 @@ public final class TipsViewController<T: TipsItemType>: UIViewController {
         }
     }
 }
+#endif

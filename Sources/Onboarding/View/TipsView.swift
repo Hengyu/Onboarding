@@ -5,6 +5,8 @@
 //  Created by hengyu on 2020/10/7.
 //
 
+import CoreGraphics
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 
 @IBDesignable
@@ -171,6 +173,7 @@ extension TipsView {
         image = tips.image
     }
 }
+#endif
 
 func getImageRatio(isHorizontalCompact: Bool) -> CGFloat {
     #if targetEnvironment(macCatalyst) || os(macOS)

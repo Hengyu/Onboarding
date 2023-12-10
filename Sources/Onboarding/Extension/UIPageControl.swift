@@ -5,6 +5,7 @@
 //  Created by hengyu on 2020/10/13.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UIPageControl {
@@ -32,3 +33,4 @@ extension UIPageControl {
         }
     }
 }
+#endif

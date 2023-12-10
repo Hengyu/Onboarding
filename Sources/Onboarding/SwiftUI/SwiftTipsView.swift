@@ -42,7 +42,7 @@ struct SwiftTipsView: View {
                         .font(.title2.weight(.semibold))
                         .foregroundStyle(Color.primary)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        #if os(tvOS) || os(macOS)
+                        #if os(tvOS)
                         .focusable()
                         #endif
                         .focused($focus)
@@ -51,15 +51,17 @@ struct SwiftTipsView: View {
                         .font(.body)
                         .foregroundStyle(Color.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        #if os(tvOS) || os(macOS)
+                        #if os(tvOS)
                         .focusable()
                         #endif
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 #if os(tvOS)
                 .padding(.horizontal, Constants.Dimension.horizontalLarge)
-                #else
+                #elseif os(iOS) || os(visionOS)
                 .padding(.horizontal, Constants.Dimension.horizontalRegular)
+                #else
+                .padding(.horizontal, Constants.Dimension.horizontalSmall)
                 #endif
                 .padding(.vertical, Constants.Dimension.verticalRegular)
             }

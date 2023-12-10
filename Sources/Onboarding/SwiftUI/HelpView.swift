@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
 
 @available(iOS 15.0, macCatalyst 15.0, macOS 12.0, tvOS 15.0, visionOS 1.0, *)
 public struct HelpView: View {
@@ -19,49 +18,70 @@ public struct HelpView: View {
     }
 
     public var body: some View {
-        ZStack(alignment: .topTrailing) {
-            TabView(selection: $selection) {
-                ForEach(0 ..< items.count, id: \.self) { index in
-                    SwiftTipsView(tips: items[index])
-                        .tag(index)
+        #if os(macOS)
+        tabView
+            .padding(Constants.Dimension.horizontalSmall)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    dismissButton
                 }
             }
-            .tabViewStyle(.page)
-            #if os(iOS) || os(tvOS) || os(visionOS)
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
-            #endif
-            .animation(.easeInOut, value: selection)
-            .transition(.slide)
+        #else
+        ZStack(alignment: .topTrailing) {
+            tabView
 
-            Button {
-                dismiss()
-            } label: {
-                Image(systemName: "xmark")
-                    .font(.body.weight(.semibold))
-                    #if os(iOS) || os(macOS)
-                    .foregroundColor(Color(white: 0.8))
-                    .padding(7)
-                    .background(Color.gray.opacity(0.95), in: Circle())
-                    #endif
-            }
-            #if os(iOS) || os(macOS)
-            .buttonStyle(.borderless)
-            .keyboardShortcut(.cancelAction)
-            #elseif os(visionOS)
-            .buttonStyle(.bordered)
-            .buttonBorderShape(.circle)
-            #endif
-            .padding(Constants.Dimension.verticalSmall)
+            dismissButton
+                .padding(Constants.Dimension.verticalSmall)
         }
-        #if os(macOS) || os(tvOS)
+        #endif
+    }
+
+    private var tabView: some View {
+        TabView(selection: $selection) {
+            ForEach(0 ..< items.count, id: \.self) { index in
+                SwiftTipsView(tips: items[index])
+                    .tabItem { Text("\(index + 1)") }
+                    .tag(index)
+            }
+        }
+        #if os(iOS) || os(tvOS) || os(visionOS)
+        .tabViewStyle(.page)
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
+        #else
+        .tableStyle(.automatic)
+        #endif
+        .animation(.easeInOut, value: selection)
+        .transition(.slide)
+        #if os(tvOS)
         .onMoveCommand(perform: movePage)
         #elseif os(iOS)
-        // detect key press event for iOS
+            // detect key press event for iOS
         .adaptiveOnMoveKeyPress(perform: movePage)
         #endif
     }
 
-    #if os(macOS) || os(tvOS)
+    private var dismissButton: some View {
+        Button {
+            dismiss()
+        } label: {
+            Image(systemName: "xmark")
+                #if os(iOS)
+                .font(.body.weight(.semibold))
+                .foregroundColor(Color(white: 0.8))
+                .padding(7)
+                .background(Color.gray.opacity(0.95), in: Circle())
+                #endif
+        }
+        #if os(iOS)
+        .buttonStyle(.borderless)
+        .keyboardShortcut(.cancelAction)
+        #elseif os(visionOS)
+        .buttonStyle(.bordered)
+        .buttonBorderShape(.circle)
+        #endif
+    }
+
+    #if os(tvOS)
     private func movePage(_ direction: MoveCommandDirection) {
         switch direction {
         case .left: selection = max(0, selection - 1)

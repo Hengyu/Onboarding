@@ -5,6 +5,7 @@
 //  Created by hengyu on 2020/10/8.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UITraitCollection {
@@ -13,3 +14,4 @@ extension UITraitCollection {
         horizontalSizeClass == .regular && verticalSizeClass == .regular
     }
 }
+#endif
