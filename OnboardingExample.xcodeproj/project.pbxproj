@@ -51,7 +51,7 @@
 		1917340D25304BE5008C4FBF /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		191734122530503D008C4FBF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		195636E72B24B2FA00E6439C /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
-		19A63583252DC22600B96864 /* OnboardingExample-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnboardingExample-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19A63583252DC22600B96864 /* OnboardingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A63586252DC22600B96864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19A6358A252DC22600B96864 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19A6358F252DC22700B96864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		19A63584252DC22600B96864 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19A63583252DC22600B96864 /* OnboardingExample-iOS.app */,
+				19A63583252DC22600B96864 /* OnboardingExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		19A63582252DC22600B96864 /* OnboardingExample-iOS */ = {
+		19A63582252DC22600B96864 /* OnboardingExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19A63597252DC22700B96864 /* Build configuration list for PBXNativeTarget "OnboardingExample-iOS" */;
+			buildConfigurationList = 19A63597252DC22700B96864 /* Build configuration list for PBXNativeTarget "OnboardingExample" */;
 			buildPhases = (
 				19A6357F252DC22600B96864 /* Sources */,
 				19A63580252DC22600B96864 /* Frameworks */,
@@ -203,9 +203,9 @@
 			);
 			dependencies = (
 			);
-			name = "OnboardingExample-iOS";
+			name = OnboardingExample;
 			productName = OnboardingExample;
-			productReference = 19A63583252DC22600B96864 /* OnboardingExample-iOS.app */;
+			productReference = 19A63583252DC22600B96864 /* OnboardingExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					19A63582252DC22600B96864 = {
 						CreatedOnToolsVersion = 12.0;
@@ -236,7 +236,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19A63582252DC22600B96864 /* OnboardingExample-iOS */,
+				19A63582252DC22600B96864 /* OnboardingExample */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -356,6 +357,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -371,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -413,6 +416,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -490,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19A63597252DC22700B96864 /* Build configuration list for PBXNativeTarget "OnboardingExample-iOS" */ = {
+		19A63597252DC22700B96864 /* Build configuration list for PBXNativeTarget "OnboardingExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19A63598252DC22700B96864 /* Debug */,

@@ -22,5 +22,5 @@ jobs:
           key: ${{ runner.os }}-Onboarding-${{ hashFiles('**/Package.resolved') }}
           restore-keys: ${{ runner.os }}-Onboarding
       - name: Build
-        run: xcodebuild build -project OnboardingExample.xcodeproj -scheme OnboardingExample-iOS -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15"
+        run: xcodebuild build -project OnboardingExample.xcodeproj -scheme OnboardingExample -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15"
 

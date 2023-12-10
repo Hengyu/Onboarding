@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1430"
+   LastUpgradeVersion = "1510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "19A63582252DC22600B96864"
-               BuildableName = "OnboardingExample-iOS.app"
-               BlueprintName = "OnboardingExample-iOS"
+               BuildableName = "OnboardingExample.app"
+               BlueprintName = "OnboardingExample"
                ReferencedContainer = "container:OnboardingExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19A63582252DC22600B96864"
-            BuildableName = "OnboardingExample-iOS.app"
-            BlueprintName = "OnboardingExample-iOS"
+            BuildableName = "OnboardingExample.app"
+            BlueprintName = "OnboardingExample"
             ReferencedContainer = "container:OnboardingExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19A63582252DC22600B96864"
-            BuildableName = "OnboardingExample-iOS.app"
-            BlueprintName = "OnboardingExample-iOS"
+            BuildableName = "OnboardingExample.app"
+            BlueprintName = "OnboardingExample"
             ReferencedContainer = "container:OnboardingExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
