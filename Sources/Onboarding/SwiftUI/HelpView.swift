@@ -61,24 +61,9 @@ public struct HelpView: View {
     }
 
     private var dismissButton: some View {
-        Button {
+        CloseButton {
             dismiss()
-        } label: {
-            Image(systemName: "xmark")
-                #if os(iOS)
-                .font(.body.weight(.semibold))
-                .foregroundColor(Color(white: 0.8))
-                .padding(7)
-                .background(Color.gray.opacity(0.95), in: Circle())
-                #endif
         }
-        #if os(iOS)
-        .buttonStyle(.borderless)
-        .keyboardShortcut(.cancelAction)
-        #elseif os(visionOS)
-        .buttonStyle(.bordered)
-        .buttonBorderShape(.circle)
-        #endif
     }
 
     #if os(tvOS)

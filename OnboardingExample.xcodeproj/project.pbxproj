@@ -26,6 +26,7 @@
 		19C3BF7A2B2560AD00B09EC8 /* SwiftTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3BF792B2560AD00B09EC8 /* SwiftTipsView.swift */; };
 		19C3BF7C2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3BF7B2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift */; };
 		19C3BF7E2B2594AA00B09EC8 /* Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3BF7D2B2594AA00B09EC8 /* Compatible.swift */; };
+		19C3BF822B27402A00B09EC8 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3BF812B27402A00B09EC8 /* CloseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		19C3BF792B2560AD00B09EC8 /* SwiftTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTipsView.swift; sourceTree = "<group>"; };
 		19C3BF7B2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPageViewControllerV2.swift; sourceTree = "<group>"; };
 		19C3BF7D2B2594AA00B09EC8 /* Compatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatible.swift; sourceTree = "<group>"; };
+		19C3BF812B27402A00B09EC8 /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		195636E62B24B2B400E6439C /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				19C3BF812B27402A00B09EC8 /* CloseButton.swift */,
 				19C3BF7D2B2594AA00B09EC8 /* Compatible.swift */,
 				19C3BF7B2B2560FD00B09EC8 /* HelpPageViewControllerV2.swift */,
 				195636E72B24B2FA00E6439C /* HelpView.swift */,
@@ -286,6 +289,7 @@
 				19A635FC252DD68700B96864 /* TipsItemType.swift in Sources */,
 				19A635F9252DD68700B96864 /* TipsViewController.swift in Sources */,
 				19A63603252DFBBE00B96864 /* Contants.swift in Sources */,
+				19C3BF822B27402A00B09EC8 /* CloseButton.swift in Sources */,
 				19A635FA252DD68700B96864 /* HelpPageViewController.swift in Sources */,
 				1905C06B253569DE00B99F34 /* UIPageControl.swift in Sources */,
 				19A63587252DC22600B96864 /* AppDelegate.swift in Sources */,

@@ -1,6 +1,6 @@
 //
 //  HelpPageViewControllerV2.swift
-//  OnboardingExample-iOS
+//  Onboarding
 //
 //  Created by hengyu on 2023/12/10.
 //
